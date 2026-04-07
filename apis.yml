@@ -1,8 +1,8 @@
 aid: race-entry
 name: Race Entry
 description: >-
-  This API was designed specifically for the Director software to allow certain
-  timers and directors integration into our Race Entry data with the Director. 
+  This API was designed specifically for the Director software to allow certain timers
+  and directors integration into our Race Entry data with the Director.
 type: Index
 position: Consumer
 access: 3rd-Party
@@ -18,9 +18,8 @@ apis:
   - aid: race-entry:race-entry
     name: Race Entry
     description: >-
-      This API was designed specifically for the Director software to allow
-      certain timers and directors integration into our Race Entry data with the
-      Director. 
+      This API was designed specifically for the Director software to allow certain
+      timers and directors integration into our Race Entry data with the Director.
     humanURL: ' https://www.raceentry.com/documentation/softwareapi/index'
     tags:
       - API
