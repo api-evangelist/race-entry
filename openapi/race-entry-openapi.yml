@@ -1,0 +1,192 @@
+openapi: 3.0.3
+info:
+  title: Race Entry Software API
+  description: >-
+    The Race Entry Software API was designed for Director software and timing
+    integrations. It provides programmatic access to events, registrations,
+    participants, teams, results, check-in PINs, club memberships, and event
+    creation flows. Authentication is performed via login to obtain a temporary
+    key and secret that expire after 48 hours.
+  version: '1.0'
+  contact:
+    name: Kin Lane
+    email: kin@apievangelist.com
+servers:
+  - url: https://www.raceentry.com/softwareapi
+    description: Production
+  - url: https://demo.raceentry.com/softwareapi
+    description: Test
+security:
+  - TempCredentials: []
+paths:
+  /user/create:
+    post:
+      summary: Create API user
+      description: Create a new API user account.
+      operationId: createUser
+      security: []
+      responses:
+        '200':
+          description: User created
+  /login:
+    post:
+      summary: Login
+      description: Authenticate and receive a temporary key and secret valid for 48 hours.
+      operationId: login
+      security: []
+      responses:
+        '200':
+          description: Returns tmp_key and tmp_secret
+  /event/get_create_data:
+    get:
+      summary: Get event creation data
+      description: Fetch supported event types, timezones, and states for creating events.
+      operationId: getEventCreateData
+      responses:
+        '200':
+          description: Reference data for event creation
+  /event/create:
+    post:
+      summary: Create event
+      description: Create a new race event.
+      operationId: createEvent
+      responses:
+        '200':
+          description: Event created
+  /event/copy:
+    post:
+      summary: Copy event
+      description: Copy an existing event to a new year.
+      operationId: copyEvent
+      responses:
+        '200':
+          description: Event copied
+  /get_events:
+    get:
+      summary: List events
+      description: List race events accessible to the authenticated user.
+      operationId: getEvents
+      responses:
+        '200':
+          description: A list of events
+  /get_event_categories:
+    get:
+      summary: Get event categories
+      description: Retrieve the categories defined for a given event.
+      operationId: getEventCategories
+      responses:
+        '200':
+          description: A list of event categories
+  /get_event_questions:
+    get:
+      summary: Get event registration questions
+      description: Retrieve the registration questions configured for an event.
+      operationId: getEventQuestions
+      responses:
+        '200':
+          description: A list of registration questions
+  /get_event_participants:
+    get:
+      summary: Get event participants
+      description: Retrieve the participants registered for an event.
+      operationId: getEventParticipants
+      responses:
+        '200':
+          description: A list of participants
+  /update_event_participant:
+    post:
+      summary: Update event participant
+      description: Update participant data for an event registration.
+      operationId: updateEventParticipant
+      responses:
+        '200':
+          description: Participant updated
+  /get_event_teams:
+    get:
+      summary: Get event teams
+      description: Retrieve teams registered to an event.
+      operationId: getEventTeams
+      responses:
+        '200':
+          description: A list of teams
+  /get_category_teams:
+    get:
+      summary: Get category teams
+      description: Retrieve teams within a specific event category.
+      operationId: getCategoryTeams
+      responses:
+        '200':
+          description: A list of category teams
+  /get_event_pin:
+    get:
+      summary: Get event PIN
+      description: Retrieve the check-in PIN for an event.
+      operationId: getEventPin
+      responses:
+        '200':
+          description: Event PIN value
+  /set_event_pin:
+    post:
+      summary: Set event PIN
+      description: Set or update the check-in PIN for an event.
+      operationId: setEventPin
+      responses:
+        '200':
+          description: PIN updated
+  /set_event_app_access:
+    post:
+      summary: Set event app access
+      description: Configure event app access controls.
+      operationId: setEventAppAccess
+      responses:
+        '200':
+          description: App access updated
+  /result/edit:
+    post:
+      summary: Edit result
+      description: Modify an individual race result.
+      operationId: editResult
+      responses:
+        '200':
+          description: Result updated
+  /result/delete:
+    post:
+      summary: Delete result
+      description: Remove an individual race result.
+      operationId: deleteResult
+      responses:
+        '200':
+          description: Result deleted
+  /upload/results:
+    post:
+      summary: Upload results
+      description: Batch upload race results.
+      operationId: uploadResults
+      responses:
+        '200':
+          description: Results uploaded
+  /memberships/get-clubs:
+    get:
+      summary: Get clubs
+      description: List clubs for membership management.
+      operationId: getClubs
+      responses:
+        '200':
+          description: A list of clubs
+  /memberships/get-members:
+    get:
+      summary: Get club members
+      description: List members for a given club.
+      operationId: getClubMembers
+      responses:
+        '200':
+          description: A list of club members
+components:
+  securitySchemes:
+    TempCredentials:
+      type: apiKey
+      in: query
+      name: tmp_key
+      description: >-
+        Temporary key returned from /login. Must be supplied alongside
+        tmp_secret query parameter. Credentials expire after 48 hours.
