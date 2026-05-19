@@ -1,0 +1,680 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: Race Entry Software API
+  description: 'Race Entry Software API. 20 operations. Lead operation: Copy event. Self-contained Naftiko capability covering
+    one Race Entry business surface.'
+  tags:
+  - Race Entry
+  - Race Entry Software API
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    RACE_ENTRY_API_KEY: RACE_ENTRY_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: race-entry
+    baseUri: https://www.raceentry.com/softwareapi
+    description: Race Entry Software API business capability. Self-contained, no shared references.
+    resources:
+    - name: event-copy
+      path: /event/copy
+      operations:
+      - name: copyevent
+        method: POST
+        description: Copy event
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: event-create
+      path: /event/create
+      operations:
+      - name: createevent
+        method: POST
+        description: Create event
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: event-get_create_data
+      path: /event/get_create_data
+      operations:
+      - name: geteventcreatedata
+        method: GET
+        description: Get event creation data
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: get_category_teams
+      path: /get_category_teams
+      operations:
+      - name: getcategoryteams
+        method: GET
+        description: Get category teams
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: get_event_categories
+      path: /get_event_categories
+      operations:
+      - name: geteventcategories
+        method: GET
+        description: Get event categories
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: get_event_participants
+      path: /get_event_participants
+      operations:
+      - name: geteventparticipants
+        method: GET
+        description: Get event participants
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: get_event_pin
+      path: /get_event_pin
+      operations:
+      - name: geteventpin
+        method: GET
+        description: Get event PIN
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: get_event_questions
+      path: /get_event_questions
+      operations:
+      - name: geteventquestions
+        method: GET
+        description: Get event registration questions
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: get_event_teams
+      path: /get_event_teams
+      operations:
+      - name: geteventteams
+        method: GET
+        description: Get event teams
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: get_events
+      path: /get_events
+      operations:
+      - name: getevents
+        method: GET
+        description: List events
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: login
+      path: /login
+      operations:
+      - name: login
+        method: POST
+        description: Login
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: memberships-get-clubs
+      path: /memberships/get-clubs
+      operations:
+      - name: getclubs
+        method: GET
+        description: Get clubs
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: memberships-get-members
+      path: /memberships/get-members
+      operations:
+      - name: getclubmembers
+        method: GET
+        description: Get club members
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: result-delete
+      path: /result/delete
+      operations:
+      - name: deleteresult
+        method: POST
+        description: Delete result
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: result-edit
+      path: /result/edit
+      operations:
+      - name: editresult
+        method: POST
+        description: Edit result
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: set_event_app_access
+      path: /set_event_app_access
+      operations:
+      - name: seteventappaccess
+        method: POST
+        description: Set event app access
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: set_event_pin
+      path: /set_event_pin
+      operations:
+      - name: seteventpin
+        method: POST
+        description: Set event PIN
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: update_event_participant
+      path: /update_event_participant
+      operations:
+      - name: updateeventparticipant
+        method: POST
+        description: Update event participant
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: upload-results
+      path: /upload/results
+      operations:
+      - name: uploadresults
+        method: POST
+        description: Upload results
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: user-create
+      path: /user/create
+      operations:
+      - name: createuser
+        method: POST
+        description: Create API user
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    authentication:
+      type: apikey
+      key: tmp_key
+      value: '{{env.RACE_ENTRY_API_KEY}}'
+      placement: query
+  exposes:
+  - type: rest
+    namespace: race-entry-rest
+    port: 8080
+    description: REST adapter for Race Entry Software API. One Spectral-compliant resource per consumed operation, prefixed
+      with /v1.
+    resources:
+    - path: /v1/event/copy
+      name: event-copy
+      description: REST surface for event-copy.
+      operations:
+      - method: POST
+        name: copyevent
+        description: Copy event
+        call: race-entry.copyevent
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/event/create
+      name: event-create
+      description: REST surface for event-create.
+      operations:
+      - method: POST
+        name: createevent
+        description: Create event
+        call: race-entry.createevent
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/event/get-create-data
+      name: event-get-create-data
+      description: REST surface for event-get_create_data.
+      operations:
+      - method: GET
+        name: geteventcreatedata
+        description: Get event creation data
+        call: race-entry.geteventcreatedata
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/get-category-teams
+      name: get-category-teams
+      description: REST surface for get_category_teams.
+      operations:
+      - method: GET
+        name: getcategoryteams
+        description: Get category teams
+        call: race-entry.getcategoryteams
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/get-event-categories
+      name: get-event-categories
+      description: REST surface for get_event_categories.
+      operations:
+      - method: GET
+        name: geteventcategories
+        description: Get event categories
+        call: race-entry.geteventcategories
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/get-event-participants
+      name: get-event-participants
+      description: REST surface for get_event_participants.
+      operations:
+      - method: GET
+        name: geteventparticipants
+        description: Get event participants
+        call: race-entry.geteventparticipants
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/get-event-pin
+      name: get-event-pin
+      description: REST surface for get_event_pin.
+      operations:
+      - method: GET
+        name: geteventpin
+        description: Get event PIN
+        call: race-entry.geteventpin
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/get-event-questions
+      name: get-event-questions
+      description: REST surface for get_event_questions.
+      operations:
+      - method: GET
+        name: geteventquestions
+        description: Get event registration questions
+        call: race-entry.geteventquestions
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/get-event-teams
+      name: get-event-teams
+      description: REST surface for get_event_teams.
+      operations:
+      - method: GET
+        name: geteventteams
+        description: Get event teams
+        call: race-entry.geteventteams
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/get-events
+      name: get-events
+      description: REST surface for get_events.
+      operations:
+      - method: GET
+        name: getevents
+        description: List events
+        call: race-entry.getevents
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/login
+      name: login
+      description: REST surface for login.
+      operations:
+      - method: POST
+        name: login
+        description: Login
+        call: race-entry.login
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/memberships/get-clubs
+      name: memberships-get-clubs
+      description: REST surface for memberships-get-clubs.
+      operations:
+      - method: GET
+        name: getclubs
+        description: Get clubs
+        call: race-entry.getclubs
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/memberships/get-members
+      name: memberships-get-members
+      description: REST surface for memberships-get-members.
+      operations:
+      - method: GET
+        name: getclubmembers
+        description: Get club members
+        call: race-entry.getclubmembers
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/result/delete
+      name: result-delete
+      description: REST surface for result-delete.
+      operations:
+      - method: POST
+        name: deleteresult
+        description: Delete result
+        call: race-entry.deleteresult
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/result/edit
+      name: result-edit
+      description: REST surface for result-edit.
+      operations:
+      - method: POST
+        name: editresult
+        description: Edit result
+        call: race-entry.editresult
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/set-event-app-access
+      name: set-event-app-access
+      description: REST surface for set_event_app_access.
+      operations:
+      - method: POST
+        name: seteventappaccess
+        description: Set event app access
+        call: race-entry.seteventappaccess
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/set-event-pin
+      name: set-event-pin
+      description: REST surface for set_event_pin.
+      operations:
+      - method: POST
+        name: seteventpin
+        description: Set event PIN
+        call: race-entry.seteventpin
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/update-event-participant
+      name: update-event-participant
+      description: REST surface for update_event_participant.
+      operations:
+      - method: POST
+        name: updateeventparticipant
+        description: Update event participant
+        call: race-entry.updateeventparticipant
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/upload/results
+      name: upload-results
+      description: REST surface for upload-results.
+      operations:
+      - method: POST
+        name: uploadresults
+        description: Upload results
+        call: race-entry.uploadresults
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/user/create
+      name: user-create
+      description: REST surface for user-create.
+      operations:
+      - method: POST
+        name: createuser
+        description: Create API user
+        call: race-entry.createuser
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: race-entry-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for Race Entry Software API. One tool per consumed operation, routed inline through this capability's
+      consumes block.
+    tools:
+    - name: copy-event
+      description: Copy event
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: race-entry.copyevent
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: create-event
+      description: Create event
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: race-entry.createevent
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: get-event-creation-data
+      description: Get event creation data
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: race-entry.geteventcreatedata
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: get-category-teams
+      description: Get category teams
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: race-entry.getcategoryteams
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: get-event-categories
+      description: Get event categories
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: race-entry.geteventcategories
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: get-event-participants
+      description: Get event participants
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: race-entry.geteventparticipants
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: get-event-pin
+      description: Get event PIN
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: race-entry.geteventpin
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: get-event-registration-questions
+      description: Get event registration questions
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: race-entry.geteventquestions
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: get-event-teams
+      description: Get event teams
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: race-entry.geteventteams
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: list-events
+      description: List events
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: race-entry.getevents
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: login
+      description: Login
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: race-entry.login
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: get-clubs
+      description: Get clubs
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: race-entry.getclubs
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: get-club-members
+      description: Get club members
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: race-entry.getclubmembers
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: delete-result
+      description: Delete result
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: race-entry.deleteresult
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: edit-result
+      description: Edit result
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: race-entry.editresult
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: set-event-app-access
+      description: Set event app access
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: race-entry.seteventappaccess
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: set-event-pin
+      description: Set event PIN
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: race-entry.seteventpin
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: update-event-participant
+      description: Update event participant
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: race-entry.updateeventparticipant
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: upload-results
+      description: Upload results
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: race-entry.uploadresults
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: create-api-user
+      description: Create API user
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: race-entry.createuser
+      outputParameters:
+      - type: object
+        mapping: $.
