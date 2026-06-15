@@ -1,0 +1,238 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Race Entry Software API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "tmp_key",
+      "value": "{{tmp_key}}",
+      "placement": "query"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Create API user",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "https://www.raceentry.com/softwareapi/user/create"
+      },
+      "docs": "Create a new API user account."
+    },
+    {
+      "info": {
+        "name": "Login",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "https://www.raceentry.com/softwareapi/login"
+      },
+      "docs": "Authenticate and receive a temporary key and secret valid for 48 hours."
+    },
+    {
+      "info": {
+        "name": "Get event creation data",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://www.raceentry.com/softwareapi/event/get_create_data"
+      },
+      "docs": "Fetch supported event types, timezones, and states for creating events."
+    },
+    {
+      "info": {
+        "name": "Create event",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "https://www.raceentry.com/softwareapi/event/create"
+      },
+      "docs": "Create a new race event."
+    },
+    {
+      "info": {
+        "name": "Copy event",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "https://www.raceentry.com/softwareapi/event/copy"
+      },
+      "docs": "Copy an existing event to a new year."
+    },
+    {
+      "info": {
+        "name": "List events",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://www.raceentry.com/softwareapi/get_events"
+      },
+      "docs": "List race events accessible to the authenticated user."
+    },
+    {
+      "info": {
+        "name": "Get event categories",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://www.raceentry.com/softwareapi/get_event_categories"
+      },
+      "docs": "Retrieve the categories defined for a given event."
+    },
+    {
+      "info": {
+        "name": "Get event registration questions",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://www.raceentry.com/softwareapi/get_event_questions"
+      },
+      "docs": "Retrieve the registration questions configured for an event."
+    },
+    {
+      "info": {
+        "name": "Get event participants",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://www.raceentry.com/softwareapi/get_event_participants"
+      },
+      "docs": "Retrieve the participants registered for an event."
+    },
+    {
+      "info": {
+        "name": "Update event participant",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "https://www.raceentry.com/softwareapi/update_event_participant"
+      },
+      "docs": "Update participant data for an event registration."
+    },
+    {
+      "info": {
+        "name": "Get event teams",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://www.raceentry.com/softwareapi/get_event_teams"
+      },
+      "docs": "Retrieve teams registered to an event."
+    },
+    {
+      "info": {
+        "name": "Get category teams",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://www.raceentry.com/softwareapi/get_category_teams"
+      },
+      "docs": "Retrieve teams within a specific event category."
+    },
+    {
+      "info": {
+        "name": "Get event PIN",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://www.raceentry.com/softwareapi/get_event_pin"
+      },
+      "docs": "Retrieve the check-in PIN for an event."
+    },
+    {
+      "info": {
+        "name": "Set event PIN",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "https://www.raceentry.com/softwareapi/set_event_pin"
+      },
+      "docs": "Set or update the check-in PIN for an event."
+    },
+    {
+      "info": {
+        "name": "Set event app access",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "https://www.raceentry.com/softwareapi/set_event_app_access"
+      },
+      "docs": "Configure event app access controls."
+    },
+    {
+      "info": {
+        "name": "Edit result",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "https://www.raceentry.com/softwareapi/result/edit"
+      },
+      "docs": "Modify an individual race result."
+    },
+    {
+      "info": {
+        "name": "Delete result",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "https://www.raceentry.com/softwareapi/result/delete"
+      },
+      "docs": "Remove an individual race result."
+    },
+    {
+      "info": {
+        "name": "Upload results",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "https://www.raceentry.com/softwareapi/upload/results"
+      },
+      "docs": "Batch upload race results."
+    },
+    {
+      "info": {
+        "name": "Get clubs",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://www.raceentry.com/softwareapi/memberships/get-clubs"
+      },
+      "docs": "List clubs for membership management."
+    },
+    {
+      "info": {
+        "name": "Get club members",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://www.raceentry.com/softwareapi/memberships/get-members"
+      },
+      "docs": "List members for a given club."
+    }
+  ],
+  "bundled": true
+}

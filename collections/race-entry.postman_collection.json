@@ -1,0 +1,1316 @@
+{
+  "item": [
+    {
+      "id": "816918de-0f63-432e-8067-a9b6bbf810f6",
+      "name": "Create API user",
+      "request": {
+        "name": "Create API user",
+        "description": {
+          "content": "Create a new API user account.",
+          "type": "text/plain"
+        },
+        "url": {
+          "path": [
+            "user",
+            "create"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": []
+        },
+        "method": "POST",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "b4e57130-3378-4e2e-89be-ffedc85bfac9",
+          "name": "User created",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "user",
+                "create"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "key": "tmp_key",
+                  "value": "<API Key>"
+                }
+              ],
+              "variable": []
+            },
+            "method": "POST",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "df01482c-520f-4c82-8578-844334905e5d",
+      "name": "Login",
+      "request": {
+        "name": "Login",
+        "description": {
+          "content": "Authenticate and receive a temporary key and secret valid for 48 hours.",
+          "type": "text/plain"
+        },
+        "url": {
+          "path": [
+            "login"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": []
+        },
+        "method": "POST",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "4f8a9d2b-0a9f-4b68-bdca-092c352e7363",
+          "name": "Returns tmp_key and tmp_secret",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "login"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "key": "tmp_key",
+                  "value": "<API Key>"
+                }
+              ],
+              "variable": []
+            },
+            "method": "POST",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "9a5e3e6e-fe46-4a2f-8763-e4ace299eb16",
+      "name": "Get event creation data",
+      "request": {
+        "name": "Get event creation data",
+        "description": {
+          "content": "Fetch supported event types, timezones, and states for creating events.",
+          "type": "text/plain"
+        },
+        "url": {
+          "path": [
+            "event",
+            "get_create_data"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": []
+        },
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "77ecc0d0-3d56-42f9-bfe3-000b77797d7f",
+          "name": "Reference data for event creation",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "event",
+                "get_create_data"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "key": "tmp_key",
+                  "value": "<API Key>"
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "c5d04c5e-a697-4378-8e24-34445bef4495",
+      "name": "Create event",
+      "request": {
+        "name": "Create event",
+        "description": {
+          "content": "Create a new race event.",
+          "type": "text/plain"
+        },
+        "url": {
+          "path": [
+            "event",
+            "create"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": []
+        },
+        "method": "POST",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "32a34b0b-a2eb-428d-99e4-f7047eae1efe",
+          "name": "Event created",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "event",
+                "create"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "key": "tmp_key",
+                  "value": "<API Key>"
+                }
+              ],
+              "variable": []
+            },
+            "method": "POST",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "52d01920-4fdb-4850-abdc-9ae657f83860",
+      "name": "Copy event",
+      "request": {
+        "name": "Copy event",
+        "description": {
+          "content": "Copy an existing event to a new year.",
+          "type": "text/plain"
+        },
+        "url": {
+          "path": [
+            "event",
+            "copy"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": []
+        },
+        "method": "POST",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "fe352458-20c0-4018-a964-83fda0b18a51",
+          "name": "Event copied",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "event",
+                "copy"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "key": "tmp_key",
+                  "value": "<API Key>"
+                }
+              ],
+              "variable": []
+            },
+            "method": "POST",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "bd578022-fb14-4ca1-abcb-5760ebb5d224",
+      "name": "List events",
+      "request": {
+        "name": "List events",
+        "description": {
+          "content": "List race events accessible to the authenticated user.",
+          "type": "text/plain"
+        },
+        "url": {
+          "path": [
+            "get_events"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": []
+        },
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "130ab3e0-68b5-46d6-b931-2a8609e44135",
+          "name": "A list of events",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "get_events"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "key": "tmp_key",
+                  "value": "<API Key>"
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "d8b14aa8-83c7-4a30-8e9a-33fb66c669a1",
+      "name": "Get event categories",
+      "request": {
+        "name": "Get event categories",
+        "description": {
+          "content": "Retrieve the categories defined for a given event.",
+          "type": "text/plain"
+        },
+        "url": {
+          "path": [
+            "get_event_categories"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": []
+        },
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "0171aec7-52b6-49f1-89e0-aff7d569d280",
+          "name": "A list of event categories",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "get_event_categories"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "key": "tmp_key",
+                  "value": "<API Key>"
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "1aeb4583-cc61-40cc-a8da-e7f66a5cfdb9",
+      "name": "Get event registration questions",
+      "request": {
+        "name": "Get event registration questions",
+        "description": {
+          "content": "Retrieve the registration questions configured for an event.",
+          "type": "text/plain"
+        },
+        "url": {
+          "path": [
+            "get_event_questions"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": []
+        },
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "19b8ba88-8a46-4641-87ee-9409a63591f1",
+          "name": "A list of registration questions",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "get_event_questions"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "key": "tmp_key",
+                  "value": "<API Key>"
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "bf437edc-5dc1-42e6-8fc1-c82361c44c29",
+      "name": "Get event participants",
+      "request": {
+        "name": "Get event participants",
+        "description": {
+          "content": "Retrieve the participants registered for an event.",
+          "type": "text/plain"
+        },
+        "url": {
+          "path": [
+            "get_event_participants"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": []
+        },
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "ba8fc0f5-9343-4043-894d-f8ab8a49fea5",
+          "name": "A list of participants",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "get_event_participants"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "key": "tmp_key",
+                  "value": "<API Key>"
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "a8e1b226-085c-4594-8696-4c4153696e31",
+      "name": "Update event participant",
+      "request": {
+        "name": "Update event participant",
+        "description": {
+          "content": "Update participant data for an event registration.",
+          "type": "text/plain"
+        },
+        "url": {
+          "path": [
+            "update_event_participant"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": []
+        },
+        "method": "POST",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "27e23798-5efe-49ff-bb7b-21578ba0dfd4",
+          "name": "Participant updated",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "update_event_participant"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "key": "tmp_key",
+                  "value": "<API Key>"
+                }
+              ],
+              "variable": []
+            },
+            "method": "POST",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "f86cd0b2-7922-42f5-8b9d-73815e52b190",
+      "name": "Get event teams",
+      "request": {
+        "name": "Get event teams",
+        "description": {
+          "content": "Retrieve teams registered to an event.",
+          "type": "text/plain"
+        },
+        "url": {
+          "path": [
+            "get_event_teams"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": []
+        },
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "5e789527-8fc0-4fbf-985f-2a1c822425ed",
+          "name": "A list of teams",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "get_event_teams"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "key": "tmp_key",
+                  "value": "<API Key>"
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "baf8b0db-d60e-4fbc-8b36-0d4916d7f056",
+      "name": "Get category teams",
+      "request": {
+        "name": "Get category teams",
+        "description": {
+          "content": "Retrieve teams within a specific event category.",
+          "type": "text/plain"
+        },
+        "url": {
+          "path": [
+            "get_category_teams"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": []
+        },
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "a66b237c-dbf4-4f36-b205-76a7dc23d907",
+          "name": "A list of category teams",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "get_category_teams"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "key": "tmp_key",
+                  "value": "<API Key>"
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "5fd6224b-b403-4210-8748-c1acba8a2af8",
+      "name": "Get event PIN",
+      "request": {
+        "name": "Get event PIN",
+        "description": {
+          "content": "Retrieve the check-in PIN for an event.",
+          "type": "text/plain"
+        },
+        "url": {
+          "path": [
+            "get_event_pin"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": []
+        },
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "4e6ed78b-27ee-457d-ae32-a8c336a54dde",
+          "name": "Event PIN value",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "get_event_pin"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "key": "tmp_key",
+                  "value": "<API Key>"
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "2375fe9b-8995-4a8a-ba9c-7260d0790837",
+      "name": "Set event PIN",
+      "request": {
+        "name": "Set event PIN",
+        "description": {
+          "content": "Set or update the check-in PIN for an event.",
+          "type": "text/plain"
+        },
+        "url": {
+          "path": [
+            "set_event_pin"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": []
+        },
+        "method": "POST",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "6d8e6955-2543-4722-8e35-94ff29e73e4c",
+          "name": "PIN updated",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "set_event_pin"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "key": "tmp_key",
+                  "value": "<API Key>"
+                }
+              ],
+              "variable": []
+            },
+            "method": "POST",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "10df22ee-9cde-49da-8ac4-df3d10fa5831",
+      "name": "Set event app access",
+      "request": {
+        "name": "Set event app access",
+        "description": {
+          "content": "Configure event app access controls.",
+          "type": "text/plain"
+        },
+        "url": {
+          "path": [
+            "set_event_app_access"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": []
+        },
+        "method": "POST",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "88492c36-cbfe-4815-9c78-4d42c1041d6a",
+          "name": "App access updated",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "set_event_app_access"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "key": "tmp_key",
+                  "value": "<API Key>"
+                }
+              ],
+              "variable": []
+            },
+            "method": "POST",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "c3632e1a-4c74-40cd-be1a-73d617a560b9",
+      "name": "Edit result",
+      "request": {
+        "name": "Edit result",
+        "description": {
+          "content": "Modify an individual race result.",
+          "type": "text/plain"
+        },
+        "url": {
+          "path": [
+            "result",
+            "edit"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": []
+        },
+        "method": "POST",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "fcdc5388-e6fe-4c28-bb99-b6709f894cac",
+          "name": "Result updated",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "result",
+                "edit"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "key": "tmp_key",
+                  "value": "<API Key>"
+                }
+              ],
+              "variable": []
+            },
+            "method": "POST",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "d9f48f04-5e78-4a9b-a474-15650bb6eb77",
+      "name": "Delete result",
+      "request": {
+        "name": "Delete result",
+        "description": {
+          "content": "Remove an individual race result.",
+          "type": "text/plain"
+        },
+        "url": {
+          "path": [
+            "result",
+            "delete"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": []
+        },
+        "method": "POST",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "0167b178-f9d8-4b98-af01-5d8ffb4fb9d2",
+          "name": "Result deleted",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "result",
+                "delete"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "key": "tmp_key",
+                  "value": "<API Key>"
+                }
+              ],
+              "variable": []
+            },
+            "method": "POST",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "6037a699-e576-45de-aec1-9b5bf82897d8",
+      "name": "Upload results",
+      "request": {
+        "name": "Upload results",
+        "description": {
+          "content": "Batch upload race results.",
+          "type": "text/plain"
+        },
+        "url": {
+          "path": [
+            "upload",
+            "results"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": []
+        },
+        "method": "POST",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "655f3c0c-f717-49d4-b384-b83239adc391",
+          "name": "Results uploaded",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "upload",
+                "results"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "key": "tmp_key",
+                  "value": "<API Key>"
+                }
+              ],
+              "variable": []
+            },
+            "method": "POST",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "a3e10bea-ad18-4c7c-90d9-8f36a2f3b14d",
+      "name": "Get clubs",
+      "request": {
+        "name": "Get clubs",
+        "description": {
+          "content": "List clubs for membership management.",
+          "type": "text/plain"
+        },
+        "url": {
+          "path": [
+            "memberships",
+            "get-clubs"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": []
+        },
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "3426422a-0ddf-450f-b62f-46634058b1aa",
+          "name": "A list of clubs",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "memberships",
+                "get-clubs"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "key": "tmp_key",
+                  "value": "<API Key>"
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "8d3256df-ddea-46af-ae82-ea7e20dd6077",
+      "name": "Get club members",
+      "request": {
+        "name": "Get club members",
+        "description": {
+          "content": "List members for a given club.",
+          "type": "text/plain"
+        },
+        "url": {
+          "path": [
+            "memberships",
+            "get-members"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": []
+        },
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "7412799d-981b-461c-84ac-a0eaa7bd8284",
+          "name": "A list of club members",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "memberships",
+                "get-members"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "key": "tmp_key",
+                  "value": "<API Key>"
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://www.raceentry.com/softwareapi",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "tmp_key"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "query"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "2d3a0c37-ad21-4110-8d70-ee29ca4500b7",
+    "name": "Race Entry Software API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The Race Entry Software API was designed for Director software and timing integrations. It provides programmatic access to events, registrations, participants, teams, results, check-in PINs, club memberships, and event creation flows. Authentication is performed via login to obtain a temporary key and secret that expire after 48 hours.\n\nContact Support:\n Name: Kin Lane\n Email: kin@apievangelist.com",
+      "type": "text/plain"
+    }
+  }
+}
