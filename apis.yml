@@ -19,6 +19,10 @@ modified: '2026-05-19'
 url: https://raw.githubusercontent.com/api-evangelist/race-entry/refs/heads/main/apis.yml
 specificationVersion: '0.19'
 common:
+  - type: DomainSecurity
+    url: security/race-entry-domain-security.yml
+  - type: Authentication
+    url: authentication/race-entry-authentication.yml
   - type: LinkedIn
     url: https://www.linkedin.com/company/raceentry-com
 apis:

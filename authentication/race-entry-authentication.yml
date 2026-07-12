@@ -1,0 +1,17 @@
+generated: '2026-07-11'
+method: derived
+source: openapi/race-entry-openapi.yml
+summary:
+  types:
+  - apiKey
+  api_key_in:
+  - query
+schemes:
+- name: TempCredentials
+  type: apiKey
+  in: query
+  parameter: tmp_key
+  description: Temporary key returned from /login. Must be supplied alongside tmp_secret query
+    parameter. Credentials expire after 48 hours.
+  sources:
+  - openapi/race-entry-openapi.yml
