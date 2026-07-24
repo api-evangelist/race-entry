@@ -1,0 +1,36 @@
+openapi: 3.0.3
+info:
+  title: Race Entry Software Event Login API
+  description: The Race Entry Software API was designed for Director software and timing integrations. It provides programmatic access to events, registrations, participants, teams, results, check-in PINs, club memberships, and event creation flows. Authentication is performed via login to obtain a temporary key and secret that expire after 48 hours.
+  version: '1.0'
+  contact:
+    name: Kin Lane
+    email: kin@apievangelist.com
+servers:
+- url: https://www.raceentry.com/softwareapi
+  description: Production
+- url: https://demo.raceentry.com/softwareapi
+  description: Test
+security:
+- TempCredentials: []
+tags:
+- name: Login
+paths:
+  /login:
+    post:
+      summary: Login
+      description: Authenticate and receive a temporary key and secret valid for 48 hours.
+      operationId: login
+      security: []
+      responses:
+        '200':
+          description: Returns tmp_key and tmp_secret
+      tags:
+      - Login
+components:
+  securitySchemes:
+    TempCredentials:
+      type: apiKey
+      in: query
+      name: tmp_key
+      description: Temporary key returned from /login. Must be supplied alongside tmp_secret query parameter. Credentials expire after 48 hours.

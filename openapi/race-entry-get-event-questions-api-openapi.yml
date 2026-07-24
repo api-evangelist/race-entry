@@ -1,0 +1,35 @@
+openapi: 3.0.3
+info:
+  title: Race Entry Software Event Get Event Questions API
+  description: The Race Entry Software API was designed for Director software and timing integrations. It provides programmatic access to events, registrations, participants, teams, results, check-in PINs, club memberships, and event creation flows. Authentication is performed via login to obtain a temporary key and secret that expire after 48 hours.
+  version: '1.0'
+  contact:
+    name: Kin Lane
+    email: kin@apievangelist.com
+servers:
+- url: https://www.raceentry.com/softwareapi
+  description: Production
+- url: https://demo.raceentry.com/softwareapi
+  description: Test
+security:
+- TempCredentials: []
+tags:
+- name: Get Event Questions
+paths:
+  /get_event_questions:
+    get:
+      summary: Get event registration questions
+      description: Retrieve the registration questions configured for an event.
+      operationId: getEventQuestions
+      responses:
+        '200':
+          description: A list of registration questions
+      tags:
+      - Get Event Questions
+components:
+  securitySchemes:
+    TempCredentials:
+      type: apiKey
+      in: query
+      name: tmp_key
+      description: Temporary key returned from /login. Must be supplied alongside tmp_secret query parameter. Credentials expire after 48 hours.
