@@ -5,9 +5,22 @@ description: >-
   our Race Entry data with the Director. It provides programmatic access to events, registrations, participants, teams,
   results, check-in PINs, and club memberships, with temporary key/secret authentication issued via a login endpoint.
 type: Index
+accessModel:
+  pricing: freemium
+  onboarding: self-serve
+  trial: false
+  try_now: true
+  public: false
+  label: Freemium · Self-serve signup
+  confidence: high
+  source:
+  - plans
+  - authentication
+  generated: '2026-07-22'
+  method: derived
 position: Consumer
 access: 3rd-Party
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/race-entry.png
 tags:
   - Race Timing
   - Race Registration
@@ -28,23 +41,200 @@ common:
   - type: LinkedIn
     url: https://www.linkedin.com/company/raceentry-com
 apis:
-  - aid: race-entry:race-entry
-    name: Race Entry
-    description: >-
-      This API was designed specifically for the Director software to allow certain timers and directors integration
-      into our Race Entry data with the Director.
-    humanURL: https://www.raceentry.com/documentation/softwareapi/index
-    baseURL: https://www.raceentry.com/softwareapi
-    tags:
-      - Race Timing
-      - Race Registration
-      - Event Management
-      - Race Results
-    properties:
-      - type: Documentation
-        url: https://www.raceentry.com/documentation/softwareapi/index
-      - type: OpenAPI
-        url: https://raw.githubusercontent.com/api-evangelist/race-entry/refs/heads/main/openapi/race-entry-openapi.yml
+- aid: race-entry:race-entry-event-api
+  name: Race Entry Event API
+  description: The Event API from Race Entry — 3 operation(s) for event.
+  humanURL: https://www.raceentry.com/documentation/softwareapi/index
+  baseURL: https://www.raceentry.com/softwareapi
+  tags:
+  - Event
+  properties:
+  - type: OpenAPI
+    url: openapi/race-entry-event-api-openapi.yml
+  - type: Documentation
+    url: https://www.raceentry.com/documentation/softwareapi/index
+- aid: race-entry:race-entry-get-category-teams-api
+  name: Race Entry Get Category Teams API
+  description: The Get Category Teams API from Race Entry — 1 operation(s) for get category teams.
+  humanURL: https://www.raceentry.com/documentation/softwareapi/index
+  baseURL: https://www.raceentry.com/softwareapi
+  tags:
+  - Get Category Teams
+  properties:
+  - type: OpenAPI
+    url: openapi/race-entry-get-category-teams-api-openapi.yml
+  - type: Documentation
+    url: https://www.raceentry.com/documentation/softwareapi/index
+- aid: race-entry:race-entry-get-event-categories-api
+  name: Race Entry Get Event Categories API
+  description: The Get Event Categories API from Race Entry — 1 operation(s) for get event categories.
+  humanURL: https://www.raceentry.com/documentation/softwareapi/index
+  baseURL: https://www.raceentry.com/softwareapi
+  tags:
+  - Get Event Categories
+  properties:
+  - type: OpenAPI
+    url: openapi/race-entry-get-event-categories-api-openapi.yml
+  - type: Documentation
+    url: https://www.raceentry.com/documentation/softwareapi/index
+- aid: race-entry:race-entry-get-event-participants-api
+  name: Race Entry Get Event Participants API
+  description: >-
+    The Get Event Participants API from Race Entry — 1 operation(s) for get event participants.
+  humanURL: https://www.raceentry.com/documentation/softwareapi/index
+  baseURL: https://www.raceentry.com/softwareapi
+  tags:
+  - Get Event Participants
+  properties:
+  - type: OpenAPI
+    url: openapi/race-entry-get-event-participants-api-openapi.yml
+  - type: Documentation
+    url: https://www.raceentry.com/documentation/softwareapi/index
+- aid: race-entry:race-entry-get-event-pin-api
+  name: Race Entry Get Event Pin API
+  description: The Get Event Pin API from Race Entry — 1 operation(s) for get event pin.
+  humanURL: https://www.raceentry.com/documentation/softwareapi/index
+  baseURL: https://www.raceentry.com/softwareapi
+  tags:
+  - Get Event Pin
+  properties:
+  - type: OpenAPI
+    url: openapi/race-entry-get-event-pin-api-openapi.yml
+  - type: Documentation
+    url: https://www.raceentry.com/documentation/softwareapi/index
+- aid: race-entry:race-entry-get-event-questions-api
+  name: Race Entry Get Event Questions API
+  description: The Get Event Questions API from Race Entry — 1 operation(s) for get event questions.
+  humanURL: https://www.raceentry.com/documentation/softwareapi/index
+  baseURL: https://www.raceentry.com/softwareapi
+  tags:
+  - Get Event Questions
+  properties:
+  - type: OpenAPI
+    url: openapi/race-entry-get-event-questions-api-openapi.yml
+  - type: Documentation
+    url: https://www.raceentry.com/documentation/softwareapi/index
+- aid: race-entry:race-entry-get-event-teams-api
+  name: Race Entry Get Event Teams API
+  description: The Get Event Teams API from Race Entry — 1 operation(s) for get event teams.
+  humanURL: https://www.raceentry.com/documentation/softwareapi/index
+  baseURL: https://www.raceentry.com/softwareapi
+  tags:
+  - Get Event Teams
+  properties:
+  - type: OpenAPI
+    url: openapi/race-entry-get-event-teams-api-openapi.yml
+  - type: Documentation
+    url: https://www.raceentry.com/documentation/softwareapi/index
+- aid: race-entry:race-entry-get-events-api
+  name: Race Entry Get Events API
+  description: The Get Events API from Race Entry — 1 operation(s) for get events.
+  humanURL: https://www.raceentry.com/documentation/softwareapi/index
+  baseURL: https://www.raceentry.com/softwareapi
+  tags:
+  - Get Events
+  properties:
+  - type: OpenAPI
+    url: openapi/race-entry-get-events-api-openapi.yml
+  - type: Documentation
+    url: https://www.raceentry.com/documentation/softwareapi/index
+- aid: race-entry:race-entry-login-api
+  name: Race Entry Login API
+  description: The Login API from Race Entry — 1 operation(s) for login.
+  humanURL: https://www.raceentry.com/documentation/softwareapi/index
+  baseURL: https://www.raceentry.com/softwareapi
+  tags:
+  - Login
+  properties:
+  - type: OpenAPI
+    url: openapi/race-entry-login-api-openapi.yml
+  - type: Documentation
+    url: https://www.raceentry.com/documentation/softwareapi/index
+- aid: race-entry:race-entry-memberships-api
+  name: Race Entry Memberships API
+  description: The Memberships API from Race Entry — 2 operation(s) for memberships.
+  humanURL: https://www.raceentry.com/documentation/softwareapi/index
+  baseURL: https://www.raceentry.com/softwareapi
+  tags:
+  - Memberships
+  properties:
+  - type: OpenAPI
+    url: openapi/race-entry-memberships-api-openapi.yml
+  - type: Documentation
+    url: https://www.raceentry.com/documentation/softwareapi/index
+- aid: race-entry:race-entry-result-api
+  name: Race Entry Result API
+  description: The Result API from Race Entry — 2 operation(s) for result.
+  humanURL: https://www.raceentry.com/documentation/softwareapi/index
+  baseURL: https://www.raceentry.com/softwareapi
+  tags:
+  - Result
+  properties:
+  - type: OpenAPI
+    url: openapi/race-entry-result-api-openapi.yml
+  - type: Documentation
+    url: https://www.raceentry.com/documentation/softwareapi/index
+- aid: race-entry:race-entry-set-event-app-access-api
+  name: Race Entry Set Event App Access API
+  description: The Set Event App Access API from Race Entry — 1 operation(s) for set event app access.
+  humanURL: https://www.raceentry.com/documentation/softwareapi/index
+  baseURL: https://www.raceentry.com/softwareapi
+  tags:
+  - Set Event App Access
+  properties:
+  - type: OpenAPI
+    url: openapi/race-entry-set-event-app-access-api-openapi.yml
+  - type: Documentation
+    url: https://www.raceentry.com/documentation/softwareapi/index
+- aid: race-entry:race-entry-set-event-pin-api
+  name: Race Entry Set Event Pin API
+  description: The Set Event Pin API from Race Entry — 1 operation(s) for set event pin.
+  humanURL: https://www.raceentry.com/documentation/softwareapi/index
+  baseURL: https://www.raceentry.com/softwareapi
+  tags:
+  - Set Event Pin
+  properties:
+  - type: OpenAPI
+    url: openapi/race-entry-set-event-pin-api-openapi.yml
+  - type: Documentation
+    url: https://www.raceentry.com/documentation/softwareapi/index
+- aid: race-entry:race-entry-update-event-participant-api
+  name: Race Entry Update Event Participant API
+  description: >-
+    The Update Event Participant API from Race Entry — 1 operation(s) for update event participant.
+  humanURL: https://www.raceentry.com/documentation/softwareapi/index
+  baseURL: https://www.raceentry.com/softwareapi
+  tags:
+  - Update Event Participant
+  properties:
+  - type: OpenAPI
+    url: openapi/race-entry-update-event-participant-api-openapi.yml
+  - type: Documentation
+    url: https://www.raceentry.com/documentation/softwareapi/index
+- aid: race-entry:race-entry-upload-api
+  name: Race Entry Upload API
+  description: The Upload API from Race Entry — 1 operation(s) for upload.
+  humanURL: https://www.raceentry.com/documentation/softwareapi/index
+  baseURL: https://www.raceentry.com/softwareapi
+  tags:
+  - Upload
+  properties:
+  - type: OpenAPI
+    url: openapi/race-entry-upload-api-openapi.yml
+  - type: Documentation
+    url: https://www.raceentry.com/documentation/softwareapi/index
+- aid: race-entry:race-entry-user-api
+  name: Race Entry User API
+  description: The User API from Race Entry — 1 operation(s) for user.
+  humanURL: https://www.raceentry.com/documentation/softwareapi/index
+  baseURL: https://www.raceentry.com/softwareapi
+  tags:
+  - User
+  properties:
+  - type: OpenAPI
+    url: openapi/race-entry-user-api-openapi.yml
+  - type: Documentation
+    url: https://www.raceentry.com/documentation/softwareapi/index
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
