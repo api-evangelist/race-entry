@@ -1,0 +1,48 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Race Entry Software Event Result API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "tmp_key",
+      "value": "{{tmp_key}}",
+      "placement": "query"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Result",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Edit result",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://www.raceentry.com/softwareapi/result/edit"
+          },
+          "docs": "Modify an individual race result."
+        },
+        {
+          "info": {
+            "name": "Delete result",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://www.raceentry.com/softwareapi/result/delete"
+          },
+          "docs": "Remove an individual race result."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

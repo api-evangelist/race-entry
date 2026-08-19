@@ -1,0 +1,37 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Race Entry Software Event Get Event Questions API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "tmp_key",
+      "value": "{{tmp_key}}",
+      "placement": "query"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Get Event Questions",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get event registration questions",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.raceentry.com/softwareapi/get_event_questions"
+          },
+          "docs": "Retrieve the registration questions configured for an event."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

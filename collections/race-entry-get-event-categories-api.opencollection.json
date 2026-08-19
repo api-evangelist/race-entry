@@ -1,0 +1,37 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Race Entry Software Event Get Event Categories API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "tmp_key",
+      "value": "{{tmp_key}}",
+      "placement": "query"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Get Event Categories",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get event categories",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.raceentry.com/softwareapi/get_event_categories"
+          },
+          "docs": "Retrieve the categories defined for a given event."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

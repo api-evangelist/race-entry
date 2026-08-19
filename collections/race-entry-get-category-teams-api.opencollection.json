@@ -1,0 +1,37 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Race Entry Software Event Get Category Teams API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "tmp_key",
+      "value": "{{tmp_key}}",
+      "placement": "query"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Get Category Teams",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get category teams",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.raceentry.com/softwareapi/get_category_teams"
+          },
+          "docs": "Retrieve teams within a specific event category."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

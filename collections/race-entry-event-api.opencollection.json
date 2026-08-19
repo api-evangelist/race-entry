@@ -1,0 +1,59 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Race Entry Software Event API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "tmp_key",
+      "value": "{{tmp_key}}",
+      "placement": "query"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Event",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get event creation data",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.raceentry.com/softwareapi/event/get_create_data"
+          },
+          "docs": "Fetch supported event types, timezones, and states for creating events."
+        },
+        {
+          "info": {
+            "name": "Create event",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://www.raceentry.com/softwareapi/event/create"
+          },
+          "docs": "Create a new race event."
+        },
+        {
+          "info": {
+            "name": "Copy event",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://www.raceentry.com/softwareapi/event/copy"
+          },
+          "docs": "Copy an existing event to a new year."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
