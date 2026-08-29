@@ -5,6 +5,17 @@ description: >-
   our Race Entry data with the Director. It provides programmatic access to events, registrations, participants, teams,
   results, check-in PINs, and club memberships, with temporary key/secret authentication issued via a login endpoint.
 type: Index
+deliveryModel:
+  model: unknown
+  open_source: false
+  commercial: false
+  callable_host: true
+  label: Delivery model not determined — needs a product licence on record
+  confidence: low
+  source:
+  - openapi
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: freemium
   onboarding: self-serve
