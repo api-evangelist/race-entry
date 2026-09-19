@@ -169,6 +169,8 @@ apis:
   humanURL: https://www.raceentry.com/documentation/softwareapi/index
   baseURL: https://www.raceentry.com/softwareapi
   tags:
+  - Membership
+  tags_raw:
   - Memberships
   properties:
   - type: OpenAPI
