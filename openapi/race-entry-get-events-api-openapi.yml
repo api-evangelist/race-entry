@@ -1,6 +1,6 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: Race Entry Software Event Get Events API
+  title: Race Entry Software Get Events API
   description: The Race Entry Software API was designed for Director software and timing integrations. It provides programmatic access to events, registrations, participants, teams, results, check-in PINs, club memberships, and event creation flows. Authentication is performed via login to obtain a temporary key and secret that expire after 48 hours.
   version: '1.0'
   contact:
