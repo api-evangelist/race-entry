@@ -1,4 +1,4 @@
-# Race Entry (race-entry)
+# Race Entry
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,55 +66,143 @@
 
 This API was designed specifically for the Director software to allow certain timers and directors integration into our Race Entry data with the Director. It provides programmatic access to events, registrations, participants, teams, results, check-in PINs, and club memberships, with temporary key/secret authentication issued via a login endpoint.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/race-entry/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/race-entry/refs/heads/main/apis.yml)
+**Areas:** Race Timing · Race Registration · Event Management · Race Results · Sports
 
-## Scope
+## Race Entry on APIs.io
 
-- **Type:** Index
-- **Position:** Consumer
-- **Access:** 3rd-Party
+Everything profiled for Race Entry is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/race-entry/](https://apis.io/providers/race-entry/)** — or go straight to one of the APIs or properties below.
 
-## Tags
+### APIs (16)
 
-- Race Timing
-- Race Registration
-- Event Management
-- Race Results
-- Sports
+- [Race Entry Event API](https://apis.io/apis/race-entry/race-entry-event-api/) — The Event API from Race Entry — 3 operation(s) for event.
+- [Race Entry Get Category Teams API](https://apis.io/apis/race-entry/race-entry-get-category-teams-api/) — The Get Category Teams API from Race Entry — 1 operation(s) for get category teams.
+- [Race Entry Get Event Categories API](https://apis.io/apis/race-entry/race-entry-get-event-categories-api/) — The Get Event Categories API from Race Entry — 1 operation(s) for get event categories.
+- [Race Entry Get Event Participants API](https://apis.io/apis/race-entry/race-entry-get-event-participants-api/) — The Get Event Participants API from Race Entry — 1 operation(s) for get event participants.
+- [Race Entry Get Event Pin API](https://apis.io/apis/race-entry/race-entry-get-event-pin-api/) — The Get Event Pin API from Race Entry — 1 operation(s) for get event pin.
+- [Race Entry Get Event Questions API](https://apis.io/apis/race-entry/race-entry-get-event-questions-api/) — The Get Event Questions API from Race Entry — 1 operation(s) for get event questions.
+- [Race Entry Get Event Teams API](https://apis.io/apis/race-entry/race-entry-get-event-teams-api/) — The Get Event Teams API from Race Entry — 1 operation(s) for get event teams.
+- [Race Entry Get Events API](https://apis.io/apis/race-entry/race-entry-get-events-api/) — The Get Events API from Race Entry — 1 operation(s) for get events.
+- [Race Entry Login API](https://apis.io/apis/race-entry/race-entry-login-api/) — The Login API from Race Entry — 1 operation(s) for login.
+- [Race Entry Memberships API](https://apis.io/apis/race-entry/race-entry-memberships-api/) — The Memberships API from Race Entry — 2 operation(s) for memberships.
+- [Race Entry Result API](https://apis.io/apis/race-entry/race-entry-result-api/) — The Result API from Race Entry — 2 operation(s) for result.
+- [Race Entry Set Event App Access API](https://apis.io/apis/race-entry/race-entry-set-event-app-access-api/) — The Set Event App Access API from Race Entry — 1 operation(s) for set event app access.
+- [Race Entry Set Event Pin API](https://apis.io/apis/race-entry/race-entry-set-event-pin-api/) — The Set Event Pin API from Race Entry — 1 operation(s) for set event pin.
+- [Race Entry Update Event Participant API](https://apis.io/apis/race-entry/race-entry-update-event-participant-api/) — The Update Event Participant API from Race Entry — 1 operation(s) for update event participant.
+- [Race Entry Upload API](https://apis.io/apis/race-entry/race-entry-upload-api/) — The Upload API from Race Entry — 1 operation(s) for upload.
+- [Race Entry User API](https://apis.io/apis/race-entry/race-entry-user-api/) — The User API from Race Entry — 1 operation(s) for user.
 
-## Timestamps
+### Published properties
 
-- **Created:** 2025-02-06
-- **Modified:** 2026-05-19
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## APIs
+#### Agentic access (1)
 
-### Race Entry
+Which operations an agent can call, which act, and which need a human in the loop.
 
-This API was designed specifically for the Director software to allow certain timers and directors integration into our Race Entry data with the Director.
+- [Race Entry Agentic Access](https://apis.io/agentic-access/race-entry/race-entry-agentic-access/)
 
-- **Human URL:** [https://www.raceentry.com/documentation/softwareapi/index](https://www.raceentry.com/documentation/softwareapi/index)
-- **Base URL:** `https://www.raceentry.com/softwareapi`
+#### Collections (17)
 
-#### Tags
+Postman and Open Collection request collections.
 
-- Race Timing
-- Race Registration
-- Event Management
-- Race Results
+- [Race Entry Software API](https://apis.io/collections/race-entry/open-race-entry/)
+- [Race Entry Software Event API](https://apis.io/collections/race-entry/open-race-entry-event-api/)
+- [Race Entry Software Event Get Category Teams API](https://apis.io/collections/race-entry/open-race-entry-get-category-teams-api/)
+- [Race Entry Software Event Get Event Categories API](https://apis.io/collections/race-entry/open-race-entry-get-event-categories-api/)
+- [Race Entry Software Event Get Event Participants API](https://apis.io/collections/race-entry/open-race-entry-get-event-participants-api/)
+- [Race Entry Software Event Get Event Pin API](https://apis.io/collections/race-entry/open-race-entry-get-event-pin-api/)
+- [Race Entry Software Event Get Event Questions API](https://apis.io/collections/race-entry/open-race-entry-get-event-questions-api/)
+- [Race Entry Software Event Get Event Teams API](https://apis.io/collections/race-entry/open-race-entry-get-event-teams-api/)
+- [Race Entry Software Event Get Events API](https://apis.io/collections/race-entry/open-race-entry-get-events-api/)
+- [Race Entry Software Event Login API](https://apis.io/collections/race-entry/open-race-entry-login-api/)
+- [Race Entry Software Event Memberships API](https://apis.io/collections/race-entry/open-race-entry-memberships-api/)
+- [Race Entry Software Event Result API](https://apis.io/collections/race-entry/open-race-entry-result-api/)
+- [Race Entry Software Event Set Event App Access API](https://apis.io/collections/race-entry/open-race-entry-set-event-app-access-api/)
+- [Race Entry Software Event Set Event Pin API](https://apis.io/collections/race-entry/open-race-entry-set-event-pin-api/)
+- [Race Entry Software Event Update Event Participant API](https://apis.io/collections/race-entry/open-race-entry-update-event-participant-api/)
+- [Race Entry Software Event Upload API](https://apis.io/collections/race-entry/open-race-entry-upload-api/)
+- [Race Entry Software Event User API](https://apis.io/collections/race-entry/open-race-entry-user-api/)
 
-#### Properties
+#### Security (2)
 
-- [Documentation](https://www.raceentry.com/documentation/softwareapi/index)
-- [OpenAPI](https://raw.githubusercontent.com/api-evangelist/race-entry/refs/heads/main/openapi/race-entry-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/race-entry.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/race-entry.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+Authentication, trust centre, and vulnerability disclosure.
 
-## Common Properties
+- [Race Entry Authentication](https://apis.io/security/race-entry/race-entry-authentication/)
+- [Race Entry Domain Security](https://apis.io/security/race-entry/race-entry-domain-security/)
 
-- [LinkedIn](https://www.linkedin.com/company/raceentry-com)
+#### Plans and pricing (1)
 
-## Maintainers
+Published plans, tiers and prices.
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+- [Race Entry Plans Pricing](https://apis.io/plans/race-entry/race-entry-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Race Entry Rate Limits](https://apis.io/rate-limits/race-entry/race-entry-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Race Entry Finops](https://apis.io/finops/race-entry/race-entry-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://raceentry.com)
+
+## API Evangelist rating
+
+**Kin Score 23.8** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 66.1 |
+| Contract quality | 45.9 |
+| Contract governance | 0.0 |
+| Operational transparency | 7.9 |
+| Developer ergonomics | 21.4 |
+| Access clarity | 7.9 |
+
+**Agent readiness 17.9** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 11.8** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/race-entry/](https://apis.io/providers/race-entry/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Race Entry: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/race-entry/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
